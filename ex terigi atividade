@@ -1,0 +1,68 @@
+def juros_simples(c, taxa, tempo):
+    m = c * (1 + taxa * tempo)
+    return m
+
+
+def juros_compostos(c, taxa, tempo):
+    montante = c * (1 + taxa) ** tempo
+    return montante
+
+
+def desconto(valor_inicial, desconto):
+    final = valor_inicial * (1 - desconto / 100)
+    return final
+
+
+def aumento(valor_inicial, aumento):
+    final = valor_inicial * (1 + aumento / 100)
+    return final
+
+
+def parcela(total, qtd):
+    p = total / qtd
+    return p
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def area_quadrado(lado):
+    area = lado * lado
+    return area
+
+
+def area_retangulo(base, altura):
+    a = base * altura
+    return a
+
+
+def area_circulo(r):
+    pi = 3.14
+    area = pi * r * r
+    return area
+
+
+def circunferencia(r):
+    pi = 3.14
+    c = 2 * pi * r
+    return c
+
+
+def volume_cilindro(r, h):
+    pi = 3.14
+    v = pi * r * r * h
+    return v
