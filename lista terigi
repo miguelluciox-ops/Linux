@@ -1,0 +1,72 @@
+setores = {}
+
+for i in range(3):
+    nome = input("Digite o nome do setor: ")
+    funcionarios = int(input("Quantidade de funcionários: "))
+
+    setores[nome] = funcionarios
+
+maior_setor = ""
+maior_qtd = 0
+
+for setor in setores:
+    if setores[setor] > maior_qtd:
+        maior_qtd = setores[setor]
+        maior_setor = setor
+
+print("\nSetor com maior número de funcionários:")
+print(maior_setor, "-", maior_qtd, "funcionários")
+
+
+
+
+
+cursos = {}
+
+for i in range(3):
+    codigo = input("Código do curso: ")
+    nome = input("Nome do curso: ")
+    carga = int(input("Carga horária: "))
+    vagas = int(input("Quantidade de vagas: "))
+
+    cursos[codigo] = {
+        "nome": nome,
+        "carga": carga,
+        "vagas": vagas
+    }
+
+consulta = input("\nDigite o código do curso para consultar: ")
+
+if consulta in cursos:
+    print("Nome:", cursos[consulta]["nome"])
+    print("Carga Horária:", cursos[consulta]["carga"])
+    print("Vagas:", cursos[consulta]["vagas"])
+else:
+    print("Curso não encontrado.")
+
+
+
+    supermercados = {}
+
+for i in range(5):
+    nome = input("Nome do supermercado: ")
+
+    faturamentos = []
+
+    for j in range(4):
+        valor = float(input("Faturamento do mês: "))
+        faturamentos.append(valor)
+
+    supermercados[nome] = faturamentos
+
+print("\nMédia de faturamento:")
+
+for mercado in supermercados:
+    soma = 0
+
+    for valor in supermercados[mercado]:
+        soma += valor
+
+    media = soma / 4
+
+    print(mercado, "=", media)
